@@ -1,0 +1,13 @@
+{
+  "Sap": {
+    "BaseUrl": "http://sap-simulator:8000/b1s/v1/",
+    "CompanyDb": "SIMULADOR",
+    "UserName": "simulador",
+    "Password": "simulador",
+    "TestCompanyDb": "SIMULADOR",
+    "TestPassword": "simulador"
+  },
+  "WebPos": {
+    "BaseUrl": "http://sap-simulator:8000/webpos-no-simulado/"
+  }
+}

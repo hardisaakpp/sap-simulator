@@ -1,0 +1,12 @@
+[
+  {
+    "CardCode": "P1790389219001", "CardName": "TEXTILES EL RAYO S.A.", "CardType": "cSupplier",
+    "Currency": "USD", "Phone1": "022000000", "EmailAddress": "proveedor.pruebas@example.com",
+    "Valid": "tYES", "Frozen": "tNO"
+  },
+  {
+    "CardCode": "P0000000000001", "CardName": "PROVEEDOR CONGELADO DE PRUEBA", "CardType": "cSupplier",
+    "Currency": "USD", "Phone1": "", "EmailAddress": "",
+    "Valid": "tYES", "Frozen": "tYES"
+  }
+]

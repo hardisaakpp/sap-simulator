@@ -1,0 +1,14 @@
+[
+  {"WarehouseCode": "RL-CD",    "WarehouseName": "BODEGA ROLAND",     "U_NEGOCIO": "ROLAND",     "U_WEBPOS": "N", "Inactive": "tNO"},
+  {"WarehouseCode": "OUT-CD",   "WarehouseName": "BODEGA DESCUENTON", "U_NEGOCIO": "DESCUENTON", "U_WEBPOS": "N", "Inactive": "tNO"},
+  {"WarehouseCode": "RG-CD",    "WarehouseName": "BODEGA REGIONS",    "U_NEGOCIO": "REGIONS",    "U_WEBPOS": "N", "Inactive": "tNO"},
+  {"WarehouseCode": "TRL-PSC",  "WarehouseName": "ROLAND PSC",        "U_NEGOCIO": "ROLAND",     "U_WEBPOS": "N", "Inactive": "tNO"},
+  {"WarehouseCode": "TRL-PSP",  "WarehouseName": "ROLAND PSP",        "U_NEGOCIO": "ROLAND",     "U_WEBPOS": "N", "Inactive": "tNO"},
+  {"WarehouseCode": "TRL-PCH",  "WarehouseName": "ROLAND PCH",        "U_NEGOCIO": "ROLAND",     "U_WEBPOS": "N", "Inactive": "tNO"},
+  {"WarehouseCode": "TOUT-LLG", "WarehouseName": "DESCUENTON LLG",    "U_NEGOCIO": "DESCUENTON", "U_WEBPOS": "N", "Inactive": "tNO"},
+  {"WarehouseCode": "TOUT-QNT", "WarehouseName": "DESCUENTON QNT",    "U_NEGOCIO": "DESCUENTON", "U_WEBPOS": "N", "Inactive": "tNO"},
+  {"WarehouseCode": "RG-MLS",   "WarehouseName": "REGIONS MLS",       "U_NEGOCIO": "REGIONS",    "U_WEBPOS": "N", "Inactive": "tNO"},
+  {"WarehouseCode": "RL-PSC",   "WarehouseName": "ALMACEN RL-PSC",    "U_NEGOCIO": "ROLAND",     "U_WEBPOS": "N", "Inactive": "tNO"},
+  {"WarehouseCode": "RL-PSP",   "WarehouseName": "ALMACEN RL-PSP",    "U_NEGOCIO": "ROLAND",     "U_WEBPOS": "N", "Inactive": "tNO"},
+  {"WarehouseCode": "OUT-LLG",  "WarehouseName": "ALMACEN OUT-LLG",   "U_NEGOCIO": "DESCUENTON", "U_WEBPOS": "N", "Inactive": "tNO"}
+]

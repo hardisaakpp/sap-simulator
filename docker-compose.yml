@@ -1,0 +1,73 @@
+# sap-simulator — SAP Business One Service Layer simulado + api-middleware-sap real, para desarrollo local.
+#
+#   docker compose up -d --build
+#
+# Cadena resultante:  api-odc-mba3 → api-middleware-sap (:8011) → sap-simulator (:50001)
+#
+# Requisitos:
+#   - SQL Server local corriendo en el host (:1433) — el de api-core-scnexus/docker-compose.local.yml.
+#   - Repo api-middleware-sap clonado junto a este (../api-middleware-sap). No se modifica.
+#   - Archivo .env con MSSQL_SA_PASSWORD (ver .env.example).
+
+name: sap-simulator
+
+services:
+  sap-simulator:
+    build: .
+    container_name: sap-simulator
+    ports:
+      - "50001:8000"   # mismo puerto que el Service Layer real
+    environment:
+      SAP_COMPANY_DB: SIMULADOR
+      SAP_USER: simulador
+      SAP_PASSWORD: simulador
+      PAGE_SIZE: "20"
+      DEFAULT_STOCK: "1000"
+    volumes:
+      - sap-sim-data:/data   # documentos creados (OCs, solicitudes de traslado, ...)
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    restart: unless-stopped
+
+  # Contenedor de un solo uso: crea/actualiza la base sc_middleware en el SQL Server local.
+  middleware-db-init:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      MSSQL_SA_PASSWORD: "${MSSQL_SA_PASSWORD:?Define MSSQL_SA_PASSWORD en .env}"
+      DB_HOST: "host.docker.internal,1433"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./sql:/scripts:ro
+      - ../api-middleware-sap/sql:/middleware-sql:ro
+    entrypoint: ["/bin/bash", "/scripts/init-middleware-db.sh"]
+    restart: "no"
+
+  # api-middleware-sap real, apuntando al simulador en vez de a SAP.
+  middleware:
+    build: ../api-middleware-sap
+    container_name: api-middleware-sap
+    depends_on:
+      sap-simulator:
+        condition: service_healthy
+      middleware-db-init:
+        condition: service_completed_successfully
+    ports:
+      - "8011:8080"   # el puerto que espera api-odc-mba3 (SAP_MIDDLEWARE_URL)
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      Sql__ConnectionString: "Server=host.docker.internal,1433;Database=sc_middleware;User Id=sa;Password=${MSSQL_SA_PASSWORD};TrustServerCertificate=True;Encrypt=False;"
+    volumes:
+      # El middleware carga appsettings.Development.local.json DESPUÉS de las variables de
+      # entorno, y ese archivo (con el SAP real) viaja dentro de la imagen porque su
+      # .dockerignore no lo excluye. Se reemplaza por la configuración del simulador.
+      - ./config/middleware.appsettings.local.json:/app/appsettings.Development.local.json:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+volumes:
+  sap-sim-data:

@@ -1,0 +1,58 @@
+[
+  {
+    "ItemCode": "R9001.101.NEG", "ItemName": "CAMISETA BASICA PRUEBA NEGRO", "BarCode": "7869000000013",
+    "U_IXX_PACK": "X6", "U_MARCA": "ROLAND", "ItemsGroupCode": 100, "Mainsupplier": "P1790389219001",
+    "InventoryUOM": "UND", "ItemType": "itItems", "PurchaseItem": "tYES", "SalesItem": "tYES", "InventoryItem": "tYES",
+    "Valid": "tYES", "Frozen": "tNO",
+    "ItemPrices": [{"PriceList": 1, "Price": 12.99, "Currency": "USD"}, {"PriceList": 2, "Price": 5.6, "Currency": "USD"}]
+  },
+  {
+    "ItemCode": "R9001.101.BLA", "ItemName": "CAMISETA BASICA PRUEBA BLANCO", "BarCode": "7869000000020",
+    "U_IXX_PACK": "X6", "U_MARCA": "ROLAND", "ItemsGroupCode": 100, "Mainsupplier": "P1790389219001",
+    "InventoryUOM": "UND", "ItemType": "itItems", "PurchaseItem": "tYES", "SalesItem": "tYES", "InventoryItem": "tYES",
+    "Valid": "tYES", "Frozen": "tNO",
+    "ItemPrices": [{"PriceList": 1, "Price": 12.99, "Currency": "USD"}, {"PriceList": 2, "Price": 5.6, "Currency": "USD"}]
+  },
+  {
+    "ItemCode": "R9002.205.AZM", "ItemName": "JEAN SLIM PRUEBA AZUL MEDIO", "BarCode": "7869000000037",
+    "U_IXX_PACK": "X3", "U_MARCA": "ROLAND", "ItemsGroupCode": 101, "Mainsupplier": "P1790389219001",
+    "InventoryUOM": "UND", "ItemType": "itItems", "PurchaseItem": "tYES", "SalesItem": "tYES", "InventoryItem": "tYES",
+    "Valid": "tYES", "Frozen": "tNO",
+    "ItemPrices": [{"PriceList": 1, "Price": 39.99, "Currency": "USD"}, {"PriceList": 2, "Price": 17.5, "Currency": "USD"}]
+  },
+  {
+    "ItemCode": "R9003.310.GRS", "ItemName": "BUZO CAPUCHA PRUEBA GRIS", "BarCode": "7869000000044",
+    "U_IXX_PACK": "X2", "U_MARCA": "ROLAND", "ItemsGroupCode": 100, "Mainsupplier": "P1790389219001",
+    "InventoryUOM": "UND", "ItemType": "itItems", "PurchaseItem": "tYES", "SalesItem": "tYES", "InventoryItem": "tYES",
+    "Valid": "tYES", "Frozen": "tNO",
+    "ItemPrices": [{"PriceList": 1, "Price": 34.99, "Currency": "USD"}, {"PriceList": 2, "Price": 15.2, "Currency": "USD"}]
+  },
+  {
+    "ItemCode": "R9004.050.SUR", "ItemName": "MEDIAS PACK PRUEBA SURTIDO", "BarCode": "7869000000051",
+    "U_IXX_PACK": "X12", "U_MARCA": "ROLAND", "ItemsGroupCode": 102, "Mainsupplier": "P1790389219001",
+    "InventoryUOM": "UND", "ItemType": "itItems", "PurchaseItem": "tYES", "SalesItem": "tYES", "InventoryItem": "tYES",
+    "Valid": "tYES", "Frozen": "tNO",
+    "ItemPrices": [{"PriceList": 1, "Price": 4.99, "Currency": "USD"}, {"PriceList": 2, "Price": 2.1, "Currency": "USD"}]
+  },
+  {
+    "ItemCode": "R9005.412.ROJ", "ItemName": "CHOMPA TEJIDA PRUEBA ROJO", "BarCode": "7869000000068",
+    "U_IXX_PACK": "X4", "U_MARCA": "ROLAND", "ItemsGroupCode": 100, "Mainsupplier": "P1790389219001",
+    "InventoryUOM": "UND", "ItemType": "itItems", "PurchaseItem": "tYES", "SalesItem": "tYES", "InventoryItem": "tYES",
+    "Valid": "tYES", "Frozen": "tNO",
+    "ItemPrices": [{"PriceList": 1, "Price": 29.99, "Currency": "USD"}, {"PriceList": 2, "Price": 13.0, "Currency": "USD"}]
+  },
+  {
+    "ItemCode": "R9006.600.BEI", "ItemName": "PANTALON DRILL PRUEBA BEIGE", "BarCode": "7869000000075",
+    "U_IXX_PACK": "X3", "U_MARCA": "ROLAND", "ItemsGroupCode": 101, "Mainsupplier": "P1790389219001",
+    "InventoryUOM": "UND", "ItemType": "itItems", "PurchaseItem": "tYES", "SalesItem": "tYES", "InventoryItem": "tYES",
+    "Valid": "tYES", "Frozen": "tNO",
+    "ItemPrices": [{"PriceList": 1, "Price": 32.99, "Currency": "USD"}, {"PriceList": 2, "Price": 14.3, "Currency": "USD"}]
+  },
+  {
+    "ItemCode": "R9007.777.VRD", "ItemName": "GORRA PRUEBA VERDE", "BarCode": "7869000000082",
+    "U_IXX_PACK": "X12", "U_MARCA": "ROLAND", "ItemsGroupCode": 102, "Mainsupplier": "P1790389219001",
+    "InventoryUOM": "UND", "ItemType": "itItems", "PurchaseItem": "tYES", "SalesItem": "tYES", "InventoryItem": "tYES",
+    "Valid": "tYES", "Frozen": "tNO",
+    "ItemPrices": [{"PriceList": 1, "Price": 9.99, "Currency": "USD"}, {"PriceList": 2, "Price": 4.2, "Currency": "USD"}]
+  }
+]
